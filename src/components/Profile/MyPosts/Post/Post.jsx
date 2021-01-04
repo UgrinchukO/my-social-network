@@ -5,7 +5,7 @@ const Post = () => {
   return (
     <div className={s.item}>
       {" "}
-      <img src="https://i.ytimg.com/vi/Y5GLCBjHR8U/maxresdefault.jpg" /> post1
+      <img src="https://i.ytimg.com/vi/Y5GLCBjHR8U/maxresdefault.jpg" alt = "not img"/> post1
     </div>
   );
 };

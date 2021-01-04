@@ -10,7 +10,7 @@ const Profile = () => {
           src="https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg"
           width="500px"
           height="350px"
-          alt=""
+          alt="not img"
         ></img>
       </div>
       <div className={`${s.item} ${s.active}`}>
@@ -18,7 +18,7 @@ const Profile = () => {
           src="https://i.ytimg.com/vi/1Ne1hqOXKKI/maxresdefault.jpg"
           width="300px"
           height="150px"
-          alt=""
+          alt="not img"
         ></img>
         <p>ava + description</p>
       </div>
