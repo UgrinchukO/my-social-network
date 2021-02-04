@@ -1,30 +1,15 @@
 import React from "react";
 import MyPosts from "./MyPosts/MyPosts";
-import s from "./Profile.module.css";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => {
-  return (
-    <div className={s.content}>
-      <div>
-        <img
-          src="https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg"
-          width="500px"
-          height="350px"
-          alt="not img"
-        ></img>
-      </div>
-      <div className={`${s.item} ${s.active}`}>
-        <img
-          src="https://i.ytimg.com/vi/1Ne1hqOXKKI/maxresdefault.jpg"
-          width="300px"
-          height="150px"
-          alt="not img"
-        ></img>
-        <p>ava + description</p>
-      </div>
-      <MyPosts />
-    </div>
-  );
+const Profile = (props) => {
+
+    return (
+        <div>
+            <ProfileInfo/>
+            <MyPosts posts={props.state.posts}/>
+        </div>
+    );
 };
 
 export default Profile;

@@ -1,7 +1,11 @@
 .header {
     grid-area: h;
-    background-color: aquamarine;
-  }
-  .header img {
-    width: 30px;
-  }
+    /*background-color: b;*/
+    background: url("https://pcvector.net/uploads/posts/2018-08/1533326959_low-poly-background-generator-min.png");
+    background-size: 100%;
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+}

@@ -1,24 +1,34 @@
 import React from "react";
 import s from './Navbar.module.css'
+import {NavLink} from "react-router-dom";
+import Post from "../Friends/MyPosts/Post/Post";
 
-const Navbar = () => {
-    return  <nav className= {s.nav}>
-    <div className = {s.item}>
-      <a href="1"> Profile</a>
-    </div>
-    <div className ={s.item}>
-      <a href="1">Messages</a>
-    </div>
-      <div className = {s.item}>
-        <a href="1" >News</a>
-      </div>
-      <div className = {s.item}>
-      <a href="1" >Music</a>
-    </div>
-    <div className ={s.item}>
-      <a href="1" >Settings</a>
-    </div>
-  </nav>
+
+const Navbar = (props) => {
+    return <nav className={s.nav}>
+        <div className={s.item}>
+            <NavLink to={'/profile'} activeClassName={s.active}>Profile</NavLink>
+        </div>
+        <div className={s.item}>
+            <NavLink to={"/dialogs"} activeClassName={s.active}>Messages</NavLink>
+        </div>
+        <div className={s.item}>
+            <NavLink to={'/news'} activeClassName={s.active}>News</NavLink>
+        </div>
+        <div className={s.item}>
+            <NavLink to={'/music'} activeClassName={s.active}>Music</NavLink>
+        </div>
+        <div className={s.item}>
+            <NavLink to={'/settings'} activeClassName={s.active}>Settings</NavLink>
+        </div>
+        <div className={s.itemFriends}>
+            <NavLink to={'/friends'} activeClassName={s.active}>Friends</NavLink>
+            <div className={s.friendsPage}>
+                <NavLink to={'/friends/myPosts/post'} activeClassName={s.active}> <Post/></NavLink>
+                <NavLink to={'/friends/myPosts/post'} activeClassName={s.active}> <Post/></NavLink>
+                <NavLink to={'/friends/myPosts/post'} activeClassName={s.active}> <Post/></NavLink>
+            </div>
+        </div>
+    </nav>
 }
-
 export default Navbar;
